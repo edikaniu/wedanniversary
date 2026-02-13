@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(test:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(python3:*)",
+      "mcp__Context7__resolve-library-id",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
