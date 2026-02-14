@@ -16,12 +16,15 @@ export default {
         gold: {
           DEFAULT: '#C9A96E',
           light: '#E8C99B',
+          dark: '#9A7D4E',
         },
         'warm-brown': {
           DEFAULT: '#6B4F3E',
           dark: '#1A0F0A',
           muted: '#A08B7A',
+          medium: '#8A7262',
         },
+        'rose-warm': '#C48B6A',
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -36,6 +39,7 @@ export default {
         'cursor-blink': 'cursorBlink 1s step-end infinite',
         'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'scale-in': 'scaleIn 400ms ease-out both',
       },
       keyframes: {
         fadeInUp: {
@@ -67,6 +71,10 @@ export default {
         pulseGlow: {
           '0%, 100%': { opacity: '0.6' },
           '50%': { opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
     },

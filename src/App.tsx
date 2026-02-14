@@ -337,10 +337,10 @@ function useCountUp(target: number, duration: number, shouldStart: boolean) {
 
 function SectionDivider() {
   return (
-    <div className="flex items-center justify-center my-16 md:my-20 px-8 max-w-md mx-auto">
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gold/20" />
-      <span className="mx-4 text-gold/30 text-sm">✦</span>
-      <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gold/20" />
+    <div className="flex items-center justify-center my-20 md:my-24 px-8 max-w-md mx-auto">
+      <div className="flex-1 h-[1.5px] bg-gradient-to-r from-transparent to-gold/30" />
+      <span className="mx-4 text-gold/50 text-sm">✦</span>
+      <div className="flex-1 h-[1.5px] bg-gradient-to-l from-transparent to-gold/30" />
     </div>
   );
 }
@@ -354,13 +354,13 @@ function SectionHeader({ label, title }: { label: string; title: string }) {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <span className="font-cormorant text-[0.65rem] font-light tracking-[0.4em] uppercase text-gold block mb-3">
+      <span className="font-cormorant text-xs font-medium tracking-[0.4em] uppercase text-gold-dark block mb-3">
         {label}
       </span>
       <h2 className="font-playfair text-[clamp(2rem,6vw,3rem)] font-normal text-warm-brown-dark leading-tight">
         {title}
       </h2>
-      <div className="w-16 h-px bg-gold/40 mx-auto mt-4" />
+      <div className="w-16 h-[1.5px] bg-gold/50 mx-auto mt-4" />
     </div>
   );
 }
@@ -382,7 +382,7 @@ function PlaceholderImage({
       style={{ aspectRatio }}
     >
       <span className="text-4xl mb-2">{emoji}</span>
-      <span className="text-warm-brown-muted text-xs font-cormorant italic">Your photo here</span>
+      <span className="text-warm-brown-medium text-xs font-cormorant italic">Your photo here</span>
     </div>
   );
 }
@@ -543,13 +543,13 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
       onClick={handleTap}
     >
       {/* Envelope */}
-      <div className="relative" style={{ width: '280px', height: '190px' }}>
+      <div className="relative" style={{ width: '320px', height: '220px' }}>
         {/* Envelope body */}
         <div
           className="absolute inset-0 rounded-md"
           style={{
             background: 'linear-gradient(135deg, #FBF3EB 0%, #FFF8F0 50%, #FBF3EB 100%)',
-            boxShadow: '0 12px 40px rgba(44, 24, 16, 0.12), 0 4px 12px rgba(44, 24, 16, 0.08)',
+            boxShadow: '0 16px 48px rgba(44, 24, 16, 0.15), 0 6px 16px rgba(44, 24, 16, 0.10)',
             border: '1px solid rgba(201, 169, 110, 0.2)',
           }}
         />
@@ -565,7 +565,7 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
             transform: state === 'closed' ? 'translateY(20%)' : undefined,
           }}
         >
-          <span className="font-dancing text-warm-brown text-sm text-center px-4 leading-relaxed">
+          <span className="font-dancing text-warm-brown text-base text-center px-4 leading-relaxed">
             A letter written<br />from the heart...
           </span>
         </div>
@@ -574,7 +574,7 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
         <div
           className="absolute left-0 right-0 top-0"
           style={{
-            height: '95px',
+            height: '110px',
             clipPath: 'polygon(0 0, 50% 100%, 100% 0)',
             background: 'linear-gradient(180deg, #F5EDE3 0%, #FBF3EB 100%)',
             borderBottom: '1px solid rgba(201, 169, 110, 0.15)',
@@ -620,7 +620,7 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
 
       {/* Tap text */}
       <p
-        className={`mt-10 font-cormorant text-warm-brown-muted text-sm italic animate-pulse-glow ${
+        className={`mt-10 font-cormorant text-warm-brown-medium text-sm italic animate-pulse-glow ${
           state !== 'closed' ? 'opacity-0' : ''
         } transition-opacity duration-300`}
       >
@@ -643,8 +643,8 @@ function HeroSection() {
     <section ref={ref} className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
       {/* Concentric circles */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[500px] h-[500px] rounded-full border border-gold/[0.06] absolute" />
-        <div className="w-[700px] h-[700px] rounded-full border border-gold/[0.04] absolute" />
+        <div className="w-[500px] h-[500px] rounded-full border border-gold/[0.12] absolute" />
+        <div className="w-[700px] h-[700px] rounded-full border border-gold/[0.08] absolute" />
       </div>
 
       <div
@@ -653,7 +653,7 @@ function HeroSection() {
         }`}
       >
         {/* Label */}
-        <span className="font-cormorant text-[0.65rem] font-light tracking-[0.4em] uppercase text-gold block mb-6">
+        <span className="font-cormorant text-xs font-medium tracking-[0.4em] uppercase text-gold-dark block mb-6">
           Happy Anniversary
         </span>
 
@@ -663,7 +663,7 @@ function HeroSection() {
         </h1>
 
         {/* Divider */}
-        <div className="w-16 h-px bg-gold/40 mx-auto mb-5" />
+        <div className="w-16 h-[1.5px] bg-gold/50 mx-auto mb-5" />
 
         {/* Subtitle */}
         <p className="font-cormorant italic text-warm-brown text-lg mb-10">
@@ -672,13 +672,13 @@ function HeroSection() {
 
         {/* Day Counter Card */}
         <div className="glass rounded-2xl p-6 mb-10 inline-block">
-          <span className="font-cormorant text-[0.6rem] font-light tracking-[0.35em] uppercase text-gold block mb-2">
+          <span className="font-cormorant text-xs font-medium tracking-[0.35em] uppercase text-gold-dark block mb-2">
             Days of Love
           </span>
           <span className="font-playfair text-[clamp(2.5rem,8vw,4rem)] font-bold text-warm-brown-dark block leading-none">
             {formatNumber(count)}
           </span>
-          <span className="font-cormorant italic text-warm-brown-muted text-sm mt-2 block">
+          <span className="font-cormorant italic text-warm-brown-medium text-sm mt-2 block">
             ...and counting
           </span>
         </div>
@@ -694,7 +694,7 @@ function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce-gentle">
-        <span className="font-cormorant text-[0.55rem] tracking-[0.35em] uppercase text-warm-brown-muted">
+        <span className="font-cormorant text-[0.7rem] tracking-[0.35em] uppercase text-warm-brown-medium">
           Scroll
         </span>
         <div className="w-px h-8 bg-gradient-to-b from-gold/40 to-transparent" />
@@ -714,7 +714,7 @@ function TimelineSection() {
 
       <div className="relative ml-4">
         {/* Vertical line */}
-        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-gold/30 via-gold/20 to-transparent" />
+        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-gold/50 via-gold/30 to-transparent" />
 
         {CONFIG.timeline.map((item, i) => (
           <TimelineItem key={i} item={item} index={i} />
@@ -751,7 +751,7 @@ function TimelineItem({
         style={{ transitionDelay: `${index * 80}ms` }}
       >
         {/* Date */}
-        <span className="font-cormorant text-[0.6rem] font-light tracking-[0.35em] uppercase text-gold block mb-1">
+        <span className="font-cormorant text-xs font-medium tracking-[0.35em] uppercase text-gold-dark block mb-1">
           {item.date}
         </span>
 
@@ -759,7 +759,7 @@ function TimelineItem({
         <h3 className="font-playfair text-xl text-warm-brown-dark mb-2">{item.title}</h3>
 
         {/* Description */}
-        <p className="font-cormorant italic text-warm-brown text-[0.95rem] leading-relaxed mb-4">
+        <p className="font-cormorant italic text-warm-brown text-base leading-relaxed mb-4">
           {item.description}
         </p>
 
@@ -785,7 +785,7 @@ function PhotoBookSection() {
   return (
     <section className="px-6 py-16 max-w-md mx-auto">
       <SectionHeader label="Tap to Reveal" title="Our Moments" />
-      <p className="text-center font-cormorant italic text-warm-brown-muted text-sm mb-8">
+      <p className="text-center font-cormorant italic text-warm-brown-medium text-sm mb-8">
         Tap each photo to flip it
       </p>
 
@@ -851,7 +851,7 @@ function PolaroidCard({
             gradient={photo.gradient}
             className="rounded-sm"
           />
-          <span className="absolute bottom-3 left-0 right-0 text-center font-dancing text-warm-brown text-xs">
+          <span className="absolute bottom-3 left-0 right-0 text-center font-dancing text-warm-brown text-sm">
             {photo.caption}
           </span>
         </div>
@@ -984,7 +984,7 @@ function LoveLetterCard({
   return (
     <div
       ref={ref}
-      className={`glass-subtle rounded-xl overflow-hidden cursor-pointer transition-all duration-1000 ${
+      className={`glass-card rounded-xl overflow-hidden cursor-pointer transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${index * 80}ms` }}
@@ -995,10 +995,10 @@ function LoveLetterCard({
         <div className="flex items-center gap-3">
           <span className="text-xl">{isOpen ? '💌' : '✉️'}</span>
           <div>
-            <p className="font-cormorant text-warm-brown-dark text-[0.95rem] font-medium">
+            <p className="font-cormorant text-warm-brown-dark text-base font-medium">
               {letter.label}
             </p>
-            <span className="font-cormorant text-warm-brown-muted text-xs italic">
+            <span className="font-cormorant text-warm-brown-medium text-sm italic">
               {isOpen ? 'Tap to close' : 'Tap to read'}
             </span>
           </div>
@@ -1010,7 +1010,7 @@ function LoveLetterCard({
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         <div className="px-4 pb-4">
           <div className="w-12 h-px bg-gold/30 mb-4" />
-          <p className="font-cormorant italic text-warm-brown text-[0.95rem] leading-relaxed">
+          <p className="font-cormorant italic text-warm-brown text-base leading-relaxed">
             {letter.message}
           </p>
           <p className="font-dancing text-rose text-sm mt-4">
@@ -1067,17 +1067,17 @@ function ReasonsCarouselSection() {
         <div className="flex items-center justify-between mt-4">
           <button
             onClick={(e) => { e.stopPropagation(); goPrev(); }}
-            className="w-10 h-10 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors"
+            className="w-11 h-11 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold/10 active:scale-95 transition-all"
             aria-label="Previous reason"
           >
             ←
           </button>
-          <span className="font-cormorant text-warm-brown-muted text-sm">
+          <span className="font-cormorant text-warm-brown-medium text-sm">
             {current + 1} of {total}
           </span>
           <button
             onClick={(e) => { e.stopPropagation(); goNext(); }}
-            className="w-10 h-10 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors"
+            className="w-11 h-11 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold/10 active:scale-95 transition-all"
             aria-label="Next reason"
           >
             →
@@ -1085,7 +1085,7 @@ function ReasonsCarouselSection() {
         </div>
       </div>
 
-      <p className="text-center font-cormorant italic text-warm-brown-muted text-sm mt-6">
+      <p className="text-center font-cormorant italic text-warm-brown-medium text-sm mt-6">
         ...and a million more I haven't written yet
       </p>
     </section>
@@ -1175,12 +1175,12 @@ function QuizSection() {
                     key={i}
                     onClick={() => handleSelect(i)}
                     disabled={selected !== null}
-                    className={`quiz-option ${stateClass} w-full text-left p-4 rounded-xl border border-gold/15 bg-white/40 font-cormorant text-warm-brown text-[0.95rem] transition-all hover:bg-white/60 disabled:cursor-default`}
+                    className={`quiz-option ${stateClass} w-full text-left p-4 rounded-xl border border-gold/25 bg-white/50 font-cormorant text-warm-brown text-base transition-all hover:bg-white/70 hover:border-gold/40 disabled:cursor-default`}
                   >
                     <span className="text-gold mr-2 text-sm">{String.fromCharCode(65 + i)}.</span>
                     {option}
                     {selected !== null && i === question.correct && (
-                      <span className="float-right text-green-600">✓</span>
+                      <span className="float-right text-rose-warm">✓</span>
                     )}
                     {selected === i && i !== question.correct && (
                       <span className="float-right text-rose">✗</span>
@@ -1206,7 +1206,7 @@ function QuizSection() {
           </p>
           <button
             onClick={resetQuiz}
-            className="px-6 py-3 rounded-full bg-rose text-white font-cormorant text-sm tracking-wider hover:bg-rose-deep transition-colors"
+            className="px-6 py-3 rounded-full bg-rose text-white font-cormorant text-base tracking-wider hover:bg-rose-deep active:scale-95 transition-all shadow-md hover:shadow-lg"
           >
             Play Again
           </button>
@@ -1301,7 +1301,7 @@ function LoveWheelSection() {
                   dominantBaseline="middle"
                   transform={`rotate(${midAngle}, ${textX}, ${textY})`}
                   className="font-cormorant"
-                  style={{ fontSize: '9px', fill: '#6B4F3E' }}
+                  style={{ fontSize: '11px', fill: '#6B4F3E' }}
                 >
                   {prize.split('\n').map((line, li) => (
                     <tspan key={li} x={textX} dy={li === 0 ? 0 : 11}>
@@ -1323,7 +1323,7 @@ function LoveWheelSection() {
         <button
           onClick={spin}
           disabled={spinning}
-          className="mt-6 px-8 py-3 rounded-full bg-rose text-white font-cormorant text-sm tracking-wider shadow-lg hover:bg-rose-deep transition-all disabled:opacity-60 disabled:cursor-default"
+          className="mt-6 px-8 py-3 rounded-full bg-rose text-white font-cormorant text-base tracking-wider shadow-lg hover:bg-rose-deep hover:shadow-xl active:scale-95 transition-all disabled:opacity-60 disabled:cursor-default"
         >
           {spinning ? 'Spinning...' : 'Spin the Wheel'}
         </button>
@@ -1371,7 +1371,7 @@ function SoundtrackCard({
   return (
     <div
       ref={ref}
-      className={`glass-subtle rounded-xl p-4 transition-all duration-1000 ${
+      className={`glass-card rounded-xl p-4 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
@@ -1379,11 +1379,11 @@ function SoundtrackCard({
       <div className="flex items-start gap-3">
         <span className="text-xl mt-0.5">🎵</span>
         <div>
-          <p className="font-playfair text-warm-brown-dark text-[0.95rem] font-medium">
+          <p className="font-playfair text-warm-brown-dark text-base font-medium">
             {song.title}
           </p>
-          <p className="font-cormorant text-warm-brown-muted text-sm">{song.artist}</p>
-          <p className="font-cormorant italic text-warm-brown text-[0.85rem] mt-1 leading-relaxed">
+          <p className="font-cormorant text-warm-brown-medium text-sm">{song.artist}</p>
+          <p className="font-cormorant italic text-warm-brown text-[0.95rem] mt-1 leading-relaxed">
             {song.note}
           </p>
         </div>
@@ -1421,15 +1421,15 @@ function FinalSurpriseSection() {
             onClick={handleReveal}
           >
             <div
-              className="w-[120px] h-[120px] rounded-2xl flex items-center justify-center animate-heartbeat"
+              className="w-[140px] h-[140px] rounded-2xl flex items-center justify-center animate-heartbeat"
               style={{
                 background: 'linear-gradient(135deg, #B76E79, #C9A96E)',
-                boxShadow: '0 8px 32px rgba(183, 110, 121, 0.3)',
+                boxShadow: '0 12px 40px rgba(183, 110, 121, 0.35), 0 4px 12px rgba(183, 110, 121, 0.15)',
               }}
             >
               <span className="text-5xl">🎁</span>
             </div>
-            <p className="font-cormorant italic text-warm-brown-muted text-sm mt-4 animate-pulse-glow">
+            <p className="font-cormorant italic text-warm-brown-medium text-sm mt-4 animate-pulse-glow">
               Tap to unwrap
             </p>
           </div>
@@ -1440,11 +1440,11 @@ function FinalSurpriseSection() {
             <h3 className="font-playfair text-2xl text-warm-brown-dark mb-4">
               {CONFIG.surpriseTitle}
             </h3>
-            <p className="font-cormorant italic text-warm-brown text-[0.95rem] leading-relaxed mb-6">
+            <p className="font-cormorant italic text-warm-brown text-base leading-relaxed mb-6">
               {CONFIG.surpriseText}
             </p>
-            <div className="w-16 h-px bg-gold/40 mx-auto mb-6" />
-            <p className="font-cormorant text-warm-brown-dark text-[0.95rem] leading-relaxed">
+            <div className="w-16 h-[1.5px] bg-gold/50 mx-auto mb-6" />
+            <p className="font-cormorant text-warm-brown-dark text-base leading-relaxed">
               {CONFIG.surpriseGift}
             </p>
           </div>
@@ -1461,11 +1461,11 @@ function FinalSurpriseSection() {
 function FooterSection() {
   return (
     <footer className="px-6 py-16 max-w-md mx-auto text-center">
-      <div className="w-24 h-px bg-gold/30 mx-auto mb-8" />
-      <p className="font-cormorant text-[0.65rem] font-light tracking-[0.4em] uppercase text-gold mb-4">
+      <div className="w-24 h-[1.5px] bg-gold/40 mx-auto mb-8" />
+      <p className="font-cormorant text-xs font-medium tracking-[0.4em] uppercase text-gold-dark mb-4">
         {CONFIG.yourName} & {CONFIG.partnerName}
       </p>
-      <p className="font-cormorant italic text-warm-brown-muted text-sm mb-4">
+      <p className="font-cormorant italic text-warm-brown-medium text-sm mb-4">
         Made with love, for the love of my life
       </p>
       <span className="text-rose text-lg animate-heartbeat inline-block">♥</span>

@@ -36,19 +36,33 @@
 
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.70);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(201, 169, 110, 0.12);
-    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+    border: 1px solid rgba(201, 169, 110, 0.22);
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08), 0 2px 8px rgba(44, 24, 16, 0.04);
   }
 
   .glass-subtle {
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(201, 169, 110, 0.08);
-    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.06);
+    border: 1px solid rgba(201, 169, 110, 0.18);
+    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.06), 0 1px 4px rgba(44, 24, 16, 0.03);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 169, 110, 0.22);
+    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.07), 0 1px 4px rgba(44, 24, 16, 0.04);
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.10), 0 2px 8px rgba(44, 24, 16, 0.05);
   }
 }
 
@@ -57,7 +71,7 @@
    ═══════════════════════════════════════════ */
 
 .bg-dot-pattern {
-  background-image: radial-gradient(circle, rgba(201, 169, 110, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(201, 169, 110, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -70,8 +84,8 @@
     to bottom,
     transparent,
     transparent 31px,
-    rgba(201, 169, 110, 0.12) 31px,
-    rgba(201, 169, 110, 0.12) 32px
+    rgba(201, 169, 110, 0.18) 31px,
+    rgba(201, 169, 110, 0.18) 32px
   );
   background-position: 0 8px;
 }
@@ -226,8 +240,8 @@
 }
 
 .quiz-option.correct {
-  background-color: rgba(72, 160, 100, 0.15) !important;
-  border-color: rgba(72, 160, 100, 0.5) !important;
+  background-color: rgba(196, 139, 106, 0.15) !important;
+  border-color: rgba(196, 139, 106, 0.5) !important;
 }
 
 .quiz-option.wrong {
