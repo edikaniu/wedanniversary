@@ -26,7 +26,7 @@ const CONFIG = {
 
   // ── HERO SECTION ──
   heroTitle: "Every Day With You\nIs My Favorite Day",
-  heroSubtitle: "A journey written in heartbeats, sealed with forever",
+  heroSubtitle: "A journey written in heartbeats, celebrated in love",
 
   // ── TIMELINE (minimum 7 milestones) ──
   timeline: [
@@ -76,12 +76,12 @@ const CONFIG = {
 
   // ── PHOTO BOOK (6 polaroid cards) ──
   photoBook: [
-    { caption: "Wearing my heart (and my tee)", backText: "This is where it all began", emoji: "📸", gradient: "from-rose-blush/40 to-gold-light/30" },
-    { caption: "Love Multiplied", backText: "You make every sunset more beautiful", emoji: "🌅", gradient: "from-gold-light/40 to-rose-blush/20" },
-    { caption: "Eyes Only For You", backText: "Your laugh is my favorite sound", emoji: "😂", gradient: "from-rose-blush/30 to-cream-dark/40" },
-    { caption: "Our little outing", backText: "Every adventure is better with you", emoji: "🗺️", gradient: "from-gold/20 to-rose-blush/30" },
-    { caption: "My Partner in Everything", backText: "My favorite dance partner, always", emoji: "💃", gradient: "from-rose-blush/40 to-gold/20" },
-    { caption: "The joy that keeps giving", backText: "You are my home", emoji: "💕", gradient: "from-gold-light/30 to-rose-blush/40" },
+    { caption: "Wearing my heart (and my tee)", backText: "You wear my heart better than any tee. Always have, always will.", emoji: "📸", gradient: "from-rose-blush/40 to-gold-light/30" },
+    { caption: "Love Multiplied", backText: "Every day our love finds new ways to multiply. You are the reason.", emoji: "🌅", gradient: "from-gold-light/40 to-rose-blush/20" },
+    { caption: "Eyes Only For You", backText: "In every room, in every crowd, my eyes always find their way back to you.", emoji: "😂", gradient: "from-rose-blush/30 to-cream-dark/40" },
+    { caption: "Our little outing", backText: "The best adventures are the ones where it's just us and the world fades away.", emoji: "🗺️", gradient: "from-gold/20 to-rose-blush/30" },
+    { caption: "My Partner in Everything", backText: "In every plan, every dream, every quiet moment — you are my partner in all of it.", emoji: "💃", gradient: "from-rose-blush/40 to-gold/20" },
+    { caption: "The joy that keeps giving", backText: "You are the gift that never stops giving. Pure, boundless joy.", emoji: "💕", gradient: "from-gold-light/30 to-rose-blush/40" },
   ],
 
   // ── HANDWRITTEN LETTER ──
@@ -157,28 +157,28 @@ Here's to forever and a day more.`,
   // ── QUIZ (minimum 4 questions) ──
   quiz: [
     {
-      question: "Where did we have our first date?",
-      options: ["A coffee shop downtown", "That little Italian restaurant", "A walk in the park", "A movie theater"],
+      question: "When was the first time I spoke to you?",
+      options: ["September 2018", "October 2018", "October 2019", "September 2019"],
       correct: 1,
     },
     {
-      question: "What song did we dance to at our wedding?",
-      options: ["Perfect — Ed Sheeran", "All of Me — John Legend", "A Thousand Years — Christina Perri", "Thinking Out Loud — Ed Sheeran"],
-      correct: 1,
+      question: "You always come to me every Sunday after service for something, what was that?",
+      options: ["Pictures", "Movies", "Books", "Money"],
+      correct: 0,
     },
     {
-      question: "What's my favorite thing about you?",
-      options: ["Your smile", "Your laugh", "Your kindness", "Everything — I can't choose just one"],
-      correct: 3,
+      question: "Where have you had the most memorable time with me?",
+      options: ["Uyo", "Ikeja", "Abeokuta", "New York"],
+      correct: 0,
     },
     {
-      question: "What do I always say before bed?",
-      options: ["Sweet dreams", "Goodnight, my love", "I love you to the moon", "See you in my dreams"],
+      question: "What song did I sing on the day I proposed to you?",
+      options: ["Perfect — Ed Sheeran", "All of Me — John Legend", "Runnin' Home to You — Grant Gustin", "Thinking Out Loud — Ed Sheeran"],
       correct: 2,
     },
     {
-      question: "If I could relive one moment, which would it be?",
-      options: ["The day we met", "Our first kiss", "Our wedding day", "Every moment with you"],
+      question: "What's my favourite thing about you?",
+      options: ["Your smile", "Your laugh", "Your kindness", "Everything — I can't choose just one"],
       correct: 3,
     },
   ],
@@ -195,18 +195,8 @@ Here's to forever and a day more.`,
     "Wish Granted\n(Anything!)",
   ],
 
-  // ── SOUNDTRACK ──
-  soundtrack: [
-    { title: "All of Me", artist: "John Legend", note: "Our wedding dance — the song that holds our forever" },
-    { title: "Perfect", artist: "Ed Sheeran", note: "Every word feels like it was written for us" },
-    { title: "A Thousand Years", artist: "Christina Perri", note: "I have loved you for a thousand years, and I'll love you for a thousand more" },
-    { title: "Can't Help Falling in Love", artist: "Elvis Presley", note: "The classic that makes me think of you every single time" },
-    { title: "At Last", artist: "Etta James", note: "Because finding you felt like the sky above was mine at last" },
-    { title: "You Are the Best Thing", artist: "Ray LaMontagne", note: "My morning sunshine song — because that's what you are" },
-  ],
-
   // ── FINAL SURPRISE ──
-  surpriseTitle: "Happy Anniversary!",
+  surpriseTitle: "Happy Anniversary & Valentine's!",
   surpriseText: "Every love story is beautiful, but ours is my absolute favorite. Thank you for being my partner, my best friend, and my forever person.",
   surpriseGift: "Your real surprise is waiting... check under your pillow tonight 💛",
 };
@@ -490,7 +480,7 @@ function Preloader({ onComplete }: { onComplete: () => void }) {
       >
         ♥
       </span>
-      <p className="font-cormorant italic text-warm-brown-muted text-sm tracking-wide">
+      <p className="font-cormorant italic text-warm-brown-medium text-sm tracking-wide">
         Loading your love story...
       </p>
     </div>
@@ -560,7 +550,7 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
           }}
         >
           <span className="font-dancing text-warm-brown text-base text-center px-4 leading-relaxed">
-            A letter written<br />from the heart...
+            For my Valentine,<br />with all my heart...
           </span>
         </div>
 
@@ -648,7 +638,7 @@ function HeroSection() {
       >
         {/* Label */}
         <span className="font-cormorant text-xs font-medium tracking-[0.4em] uppercase text-gold-dark block mb-6">
-          Happy Anniversary
+          Happy Anniversary & Happy Valentine's
         </span>
 
         {/* Title */}
@@ -1237,16 +1227,16 @@ function LoveWheelSection() {
     setSpinning(true);
     setResult(null);
 
-    const winningIndex = Math.floor(Math.random() * segments.length);
-    // Calculate rotation: multiple full spins + land on winning segment
-    // The pointer is at top (0°), segments go clockwise
-    const targetAngle = 360 - (winningIndex * segmentAngle + segmentAngle / 2);
-    const totalRotation = rotation + 1440 + targetAngle + randomBetween(0, 360);
-
+    // Spin 4-6 full rotations plus a random landing position
+    const totalRotation = rotation + 1440 + randomBetween(180, 720);
     setRotation(totalRotation);
 
     setTimeout(() => {
       setSpinning(false);
+      // Derive the winner from where the wheel actually stops
+      // Segment 0 starts at top (12 o'clock) and goes clockwise
+      const normalizedAngle = ((totalRotation % 360) + 360) % 360;
+      const winningIndex = Math.floor(normalizedAngle / segmentAngle) % segments.length;
       setResult(segments[winningIndex].replace('\n', ' '));
     }, 3800);
   };
@@ -1345,58 +1335,7 @@ function LoveWheelSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// SECTION 10: SOUNDTRACK
-// ═══════════════════════════════════════════════════════════════
-
-function SoundtrackSection() {
-  return (
-    <section className="px-6 py-16 max-w-md mx-auto">
-      <SectionHeader label="The Music of Us" title="Our Soundtrack" />
-
-      <div className="space-y-3">
-        {CONFIG.soundtrack.map((song, i) => (
-          <SoundtrackCard key={i} song={song} index={i} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function SoundtrackCard({
-  song,
-  index,
-}: {
-  song: (typeof CONFIG.soundtrack)[number];
-  index: number;
-}) {
-  const { ref, isVisible } = useScrollReveal();
-
-  return (
-    <div
-      ref={ref}
-      className={`glass-card rounded-xl p-4 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <div className="flex items-start gap-3">
-        <span className="text-xl mt-0.5">🎵</span>
-        <div>
-          <p className="font-playfair text-warm-brown-dark text-base font-medium">
-            {song.title}
-          </p>
-          <p className="font-cormorant text-warm-brown-medium text-sm">{song.artist}</p>
-          <p className="font-cormorant italic text-warm-brown text-[0.95rem] mt-1 leading-relaxed">
-            {song.note}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// SECTION 11: FINAL SURPRISE
+// SECTION 10: FINAL SURPRISE
 // ═══════════════════════════════════════════════════════════════
 
 function FinalSurpriseSection() {
@@ -1468,8 +1407,11 @@ function FooterSection() {
       <p className="font-cormorant text-xs font-medium tracking-[0.4em] uppercase text-gold-dark mb-4">
         {CONFIG.yourName} & {CONFIG.partnerName}
       </p>
-      <p className="font-cormorant italic text-warm-brown-medium text-sm mb-4">
+      <p className="font-cormorant italic text-warm-brown-medium text-sm mb-2">
         Made with love, for the love of my life
+      </p>
+      <p className="font-cormorant text-warm-brown-medium text-xs mb-4">
+        February 13 & 14 — Our Anniversary & Valentine's
       </p>
       <span className="text-rose text-lg animate-heartbeat inline-block">♥</span>
     </footer>
@@ -1520,8 +1462,6 @@ function App() {
         <QuizSection />
         <SectionDivider />
         <LoveWheelSection />
-        <SectionDivider />
-        <SoundtrackSection />
         <SectionDivider />
         <FinalSurpriseSection />
         <SectionDivider />
