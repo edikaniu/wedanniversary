@@ -35,59 +35,53 @@ const CONFIG = {
       title: "The Day We Met",
       description: "A chance encounter that rewrote the stars. One look, one smile, and the universe shifted.",
       emoji: "✨",
+      photo: "/photos/timeline-1.jpg",
     },
     {
       date: "August 2019",
       title: "Our First Date",
       description: "Nervous laughter, stolen glances, and a conversation that made time disappear completely.",
       emoji: "💕",
-    },
-    {
-      date: "December 2018",
-      title: "The First 'I Love You'",
-      description: "Three words that changed everything. Whispered softly, felt deeply, meant eternally.",
-      emoji: "💛",
-    },
-    {
-      date: "March 2019",
-      title: "Moving In Together",
-      description: "Two lives becoming one under the same roof. Every mundane moment became magic.",
-      emoji: "🏡",
-    },
-    {
-      date: "October 2020",
-      title: "The Proposal",
-      description: "Down on one knee, heart in my hands. Your tears said yes before your lips could.",
-      emoji: "💍",
+      photo: "/photos/timeline-2.jpg",
     },
     {
       date: "February 2021",
       title: "Our Wedding Day",
       description: "The most beautiful day of our lives. Every vow a promise, every dance a memory forever kept.",
       emoji: "💒",
+      photo: "/photos/timeline-5.jpg",
+    },
+    {
+      date: "December 2021",
+      title: "Our First Christmas Together",
+      description: "Our first Christmas as husband and wife. The tree, the laughter, the warmth of knowing this was just the beginning of forever.",
+      emoji: "🎄",
+      photo: "/photos/timeline-6.jpg",
     },
     {
       date: "February 2022",
       title: "First Anniversary",
       description: "One year of marriage, a lifetime of gratitude. We celebrated by simply being together.",
       emoji: "🥂",
+      photo: "/photos/timeline-7.jpg",
     },
     {
       date: "Today",
       title: "Still Falling",
       description: "Every morning I wake up more in love than the day before. This is just the beginning.",
       emoji: "💑",
+      photo: "/photos/timeline-8.jpg",
     },
   ],
 
   // ── PHOTO BOOK (6 polaroid cards) ──
   photoBook: [
-    { caption: "Our first photo together", backText: "This is where it all began", emoji: "📸", gradient: "from-rose-blush/40 to-gold-light/30" },
-    { caption: "That perfect sunset", backText: "You make every sunset more beautiful", emoji: "🌅", gradient: "from-gold-light/40 to-rose-blush/20" },
-    { caption: "Laughing until it hurts", backText: "Your laugh is my favorite sound", emoji: "😂", gradient: "from-rose-blush/30 to-cream-dark/40" },
-    { caption: "Our little adventure", backText: "Every adventure is better with you", emoji: "🗺️", gradient: "from-gold/20 to-rose-blush/30" },
-    { caption: "Dancing in the kitchen", backText: "My favorite dance partner, always", emoji: "💃", gradient: "from-rose-blush/40 to-gold/20" },
-    { caption: "Just us, perfectly us", backText: "You are my home", emoji: "💕", gradient: "from-gold-light/30 to-rose-blush/40" },
+    { caption: "Wearing my heart (and my tee)", backText: "This is where it all began", emoji: "📸", gradient: "from-rose-blush/40 to-gold-light/30" },
+    { caption: "Love Multiplied", backText: "You make every sunset more beautiful", emoji: "🌅", gradient: "from-gold-light/40 to-rose-blush/20" },
+    { caption: "Eyes Only For You", backText: "Your laugh is my favorite sound", emoji: "😂", gradient: "from-rose-blush/30 to-cream-dark/40" },
+    { caption: "Our little outing", backText: "Every adventure is better with you", emoji: "🗺️", gradient: "from-gold/20 to-rose-blush/30" },
+    { caption: "My Partner in Everything", backText: "My favorite dance partner, always", emoji: "💃", gradient: "from-rose-blush/40 to-gold/20" },
+    { caption: "The joy that keeps giving", backText: "You are my home", emoji: "💕", gradient: "from-gold-light/30 to-rose-blush/40" },
   ],
 
   // ── HANDWRITTEN LETTER ──
@@ -683,12 +677,12 @@ function HeroSection() {
           </span>
         </div>
 
-        {/* Hero placeholder image */}
-        <PlaceholderImage
-          emoji="💑"
-          aspectRatio="16/9"
-          gradient="from-rose-blush/30 to-gold-light/20"
-          className="w-full max-w-sm mx-auto rounded-xl shadow-lg"
+        {/* Hero photo */}
+        <img
+          src="/photos/hero.jpg"
+          alt="Us"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg object-cover"
+          style={{ aspectRatio: '16/9' }}
         />
       </div>
 
@@ -763,13 +757,22 @@ function TimelineItem({
           {item.description}
         </p>
 
-        {/* Photo placeholder */}
-        <PlaceholderImage
-          emoji={item.emoji}
-          aspectRatio="4/3"
-          gradient="from-rose-blush/25 to-gold-light/15"
-          className="max-w-[320px] shadow-md"
-        />
+        {/* Photo */}
+        {item.photo ? (
+          <img
+            src={item.photo}
+            alt={item.title}
+            className="max-w-[320px] rounded-lg shadow-md object-cover"
+            style={{ aspectRatio: '4/3' }}
+          />
+        ) : (
+          <PlaceholderImage
+            emoji={item.emoji}
+            aspectRatio="4/3"
+            gradient="from-rose-blush/25 to-gold-light/15"
+            className="max-w-[320px] shadow-md"
+          />
+        )}
       </div>
     </div>
   );
@@ -845,11 +848,11 @@ function PolaroidCard({
             backfaceVisibility: 'hidden',
           }}
         >
-          <PlaceholderImage
-            emoji={photo.emoji}
-            aspectRatio="1/1"
-            gradient={photo.gradient}
-            className="rounded-sm"
+          <img
+            src={`/photos/polaroid-${index + 1}.jpg`}
+            alt={photo.caption}
+            className="w-full rounded-sm object-cover"
+            style={{ aspectRatio: '1/1' }}
           />
           <span className="absolute bottom-3 left-0 right-0 text-center font-dancing text-warm-brown text-sm">
             {photo.caption}
